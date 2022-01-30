@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 __author__ = "Jhonathan Davi A.K.A jh00nbr"
 __email__ = "jdavi@insightsecurity.com.br"
 
-config = {"bot_key":"key_do_seu_bot","grupo_id":id_do_grupo(int),"url":"http://www.11rm.eb.mil.br/index.php/ultimas-noticias/143-cet-cabo-especialista-temporario-2016"}
+config = {"bot_key":"5188411229:AAGI6AwmuA6-BWu1FfCovMgoVLyFB-EZxkY","grupo_id":1837262102,"url":"http://www.11rm.eb.mil.br/index.php/ultimas-noticias/207-cet-cabo-especialista-temporario-2019-2020"}
 bot = telepot.Bot(config['bot_key'])
 group = config['grupo_id']
 
@@ -31,29 +31,35 @@ def verificar_novidades():
     ua = random.choice(carregar_useragents())
     req = requests.get(config['url'],headers={'User-Agent': ua})
     soup = BeautifulSoup(req.content,'html.parser')
+    #print(vars(soup))
 
     conteudo_div = soup.find('div',{'class':'item-page'})
     if conteudo_div.findAll('a'):
         atualizacoes = conteudo_div.findAll('a')
+        #print(vars(atualizacoes))
     
     qnt_novidades = 10 # Quantidade de noticias em 19/10/2016
     novidades = []
 
     for novidade in atualizacoes:
         if novidade.string:
+            #print(vars(novidade))
             novidades.append(novidade.string)
             qnt_novas_novidades = len(novidades)
+            #print(novidade.string)
             novidade = novidade.string 
 
     if int(qnt_novas_novidades) > qnt_novidades:
         novidade = novidades[1]
         qnt_novidades += 1
         bot.sendMessage(group,novidade)
-        print novidade, " | Novidades: ", qnt_novidades
+        print(novidade, " | Novidades: ", qnt_novidades)
     else:
-        print "[+] Sem novidades :("
+        print("[+] Sem novidades :(")
 
 if __name__ == '__main__':
     while True:
         time.sleep(600) # Verifica de 7 em 7 minutos
+        #time.sleep(5) # Verifica de 5 em 5 segundos (debug)
+        print('while')
         verificar_novidades()
