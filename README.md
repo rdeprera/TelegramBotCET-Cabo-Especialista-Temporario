@@ -13,7 +13,7 @@ pip3 install -r requeriments.txt
 
 É necessário configurar os campos <kbd><samp>bot_key</samp></kbd> (com a *string* do **token do seu bot no Telegram**) e <kbd><samp>grupo_id</samp></kbd> (com o *inteiro* da **id do grupo no Telegram** onde o bot irá publicar as notícias):
 ```python
-config = {"bot_key":"token","grupo_id":id_do_seu_grupo,"url":"http://www.11rm.eb.mil.br/index.php/ultimas-noticias/143-cet-cabo-especialista-temporario-2016"}
+config = {"bot_key":"token","grupo_id":id_do_grupo,"url":"http://www.11rm.eb.mil.br/index.php/ultimas-noticias/143-cet-cabo-especialista-temporario-2016"}
 ```
 > O token é informado no momento da criação do Bot através do @BotFather.  
   Outra forma de descobrir é iniciando uma conversa com o bot @BotFather e usar o comando <code>/token <var>@NomeDoSeuBot</var></code>.  
