@@ -15,8 +15,9 @@ pip3 install -r requeriments.txt
 ```python
 config = {"bot_key":"token","grupo_id":id_do_grupo,"url":"http://www.11rm.eb.mil.br/index.php/ultimas-noticias/207-cet-cabo-especialista-temporario-2019-2020"}
 ```
-> O token é informado no momento da criação do Bot através do @BotFather.  
-  Outra forma de descobrir é iniciando uma conversa com o bot @BotFather e usar o comando <code>/token <var>@NomeDoSeuBot</var></code>.  
+> O token é informado no momento da criação do Bot através do [@BotFather](https://telegram.me/BotFather).  
+  Outra forma de descobrir é [iniciando uma conversa com o bot @BotFather](https://telegram.me/BotFather) e usar o comando <code>/token <var>@NomeDoSeuBot</var></code>.  
   O token segue o formato <code><var>5555555555:AaAa5aAa5a5-AaAa5aAa5a5AaAa5aAa5a5-AaAa5a</var></code>.
 
-
+### Dúvidas ?
+Fale comigo no Telegram [@rdeprera](https://telegram.me/BotFather)
