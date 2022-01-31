@@ -4,17 +4,11 @@
 import requests,telepot,random,time
 from bs4 import BeautifulSoup
 
-# Esse Bot foi desenvolvido por mim para acompanhar as atualizacoes do processo seletivo CET 2016 - Cabo Especialista Temporario 2016 do exercito Brasileiro e me notificar pelo telegram.
-# Jhonathan Davi A.K.A jh00nbr / Insightl4b lab.insightsecurity.com.br
-# jh00nbr: http://jhonathandavi.com.br
-# Blog: lab.insightsecurity.com.br
-# Github: github.com/jh00nbr
-# Twitter @jh00nbr
+__author__  = "Jhonathan Davi A.K.A jh00nbr, Reinaldo Deprera"
+__email__   = "jdavi@insightsecurity.com.br, rdeprera@gmail.com"
+__status__  = "Development"
 
-__author__ = "Jhonathan Davi A.K.A jh00nbr"
-__email__ = "jdavi@insightsecurity.com.br"
-
-config = {"bot_key":"5188411229:AAGI6AwmuA6-BWu1FfCovMgoVLyFB-EZxkY","grupo_id":1837262102,"url":"http://www.11rm.eb.mil.br/index.php/ultimas-noticias/207-cet-cabo-especialista-temporario-2019-2020"}
+config = {"bot_key":"token","grupo_id":id_do_grupo,"url":"http://www.11rm.eb.mil.br/index.php/ultimas-noticias/207-cet-cabo-especialista-temporario-2019-2020"}
 bot = telepot.Bot(config['bot_key'])
 group = config['grupo_id']
 
