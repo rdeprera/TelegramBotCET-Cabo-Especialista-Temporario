@@ -1,17 +1,21 @@
-# bot_atualizacoes_eb_cet_2016
-Bot desenvolvido por mim, responsável pelo acompanhamento das atualizacoes no site do processo seletivo CET 2016 - Cabo Especialista Temporario 2016 do exercito Brasileiro e me notificar pelo telegram.
+#  TelegramBotCET - Cabo Especialista Temporário do Exército Brasileiro
 
-http://lab.insightsecurity.com.br/verificando-atualizacoes-do-processo-seletio-de-cabo-especialista-temporario-2016-2/
+<img align="left" src="tele_bot_img.png"> Acompanhamento de atualizações do processo seletivo de <abbr title="Cabo Especialista Temporário">CET</abbr> através de Bot no Telegram.
+<br clear="left"/>
 
-<center><img src="tele_bot_img.png"></img></center>
 
-# Instale as dependencias
-pip install -r requeriments.txt
+## Instale as dependencias
+```shell
+pip3 install -r requeriments.txt
+```
 
-# Configuracoes:
+## Configurações:
 
-No caso de utilização por terceiros, é necessário configurar os campos "bot_key" para a key criado do seu bot do telegram.
-config = {"bot_key":"key_do_seu_bot","grupo_id":id_do_seu_grupo(int),"url":"http://www.11rm.eb.mil.br/index.php/ultimas-noticias/143-cet-cabo-especialista-temporario-2016"}
-
+É necessário configurar os campos <kbd><samp>bot_key</samp></kbd> (com a *string* do **token do seu bot no Telegram**) e <kbd><samp>grupo_id</samp></kbd> (com o *inteiro* da **id do grupo no Telegram** onde o bot irá publicar as notícias):
+```python
+config = {"bot_key":"key_do_seu_bot","grupo_id":id_do_seu_grupo,"url":"http://www.11rm.eb.mil.br/index.php/ultimas-noticias/143-cet-cabo-especialista-temporario-2016"}
+```
+> O token é informado no momento da criação do Bot através do @BotFather  
+  Outra forma de descobrir o token do bot é iniciando uma conversa com o bot @BotFather e usar o comando <code>/token <var>@NomeDoSeuBot</var></code>
 
 
